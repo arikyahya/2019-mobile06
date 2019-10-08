@@ -1,4 +1,4 @@
-package id.ac.polinema.idealbodyweight.fragments;
+package id.ac.polinema.idealbodyweight.fragment;
 
 import android.content.Context;
 import android.net.Uri;
@@ -24,12 +24,13 @@ public class ResultFragment extends Fragment {
 
     private String information;
     private OnFragmentInteractionListener mListener;
+    private String status;
 
     public ResultFragment() {
         // Required empty public constructor
     }
 
-    public void setInformation(String information) {
+    public void setInformation(String information){
         this.information = information;
     }
 
@@ -45,7 +46,7 @@ public class ResultFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (mListener != null) {
-                    mListener.onTryAgainButtonClicked("BrocaIndex");
+                    mListener.onTryAgainButtonClicked(status);
                 }
             }
         });
@@ -74,6 +75,10 @@ public class ResultFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     /**

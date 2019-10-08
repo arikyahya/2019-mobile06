@@ -1,4 +1,4 @@
-package id.ac.polinema.idealbodyweight.fragments;
+package id.ac.polinema.idealbodyweight.fragment;
 
 import android.content.Context;
 import android.net.Uri;
@@ -35,7 +35,7 @@ public class MenuFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_menu, container, false);
         // Register event click disini
         Button brocaButton = view.findViewById(R.id.button_broca);
-        Button bmiButton = view.findViewById(R.id.button_body);
+        Button bmiButton = view.findViewById(R.id.button_bmi);
         brocaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
